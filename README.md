@@ -29,6 +29,16 @@ const MyJoiSchema = JoiShift.fromDef(mySchemaDef);
 const jsonSchema = JoiShift.toJsonSchema(MyJoiSchema);
 ```
 
+## Table of Contents
+
+-   [Why?](#why)
+-   [How?](#how)
+-   [API Reference](#api-reference)
+    -   [Core Functionality](#core-functionality)
+    -   [Utilities](#utilities)
+        -   [Infer](#infer)
+        -   [parse](#parse)
+
 ## Why?
 
 The JS ecosystem boasts countless schema validation libraries. While this offers the benefit of choice, it also leads to fragmentation of the ecosystem and makes it harder for libraries to integrate with one another.
