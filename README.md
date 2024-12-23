@@ -36,8 +36,9 @@ const jsonSchema = JoiShift.toJsonSchema(MyJoiSchema);
 -   [API Reference](#api-reference)
     -   [Core Functionality](#core-functionality)
     -   [Utilities](#utilities)
-        -   [Infer](#infer)
-        -   [parse](#parse)
+        -   [`Infer<T>`](#infer)
+        -   [`parse`](#parsevalue)
+        -   [`getParseFn`](#getparsefnschema)
 
 ## Why?
 
@@ -165,4 +166,19 @@ parse(BarJoi, { bar: true });
 const customParser = (parser: Parser, value: unknown) => {
     return parse(parser, value);
 };
+```
+
+#### getParseFn(schema)
+
+Given an unknown schema, returns a function that can parse values.
+
+```ts
+import { getParseFn } from "schema-shift";
+
+const FooZod = z.object({ foo: z.boolean() });
+
+const parser = getParseFn(FooZod);
+
+parser({ foo: true });
+// { foo: boolean }
 ```
