@@ -16,6 +16,7 @@
     "superjson": "^2.2.1",
     "superstruct": "^1.0.4",
     "tsup": "^8.0.1",
+    "typescript": "^5.7.2",
     "valibot": "^0.37.0",
     "vitest": "^1.6.0",
     "yup": "^1.4.0",
@@ -91,6 +92,7 @@
   "scripts": {
     "build": "tsup",
     "publish-pkg": "pnpm run build && pnpm publish --access=public --no-git-checks",
+    "check": "tsc --noEmit",
     "test": "vitest"
   },
   "sideEffects": false,
