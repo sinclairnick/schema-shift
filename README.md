@@ -19,13 +19,13 @@ npm i schema-shift
 // Define a schema
 const MyZodSchema = z.object({ foo: z.string() });
 
-// Generate a schema "definition"
+// Generate intermediate representation of the schema
 const mySchemaDef = ZodShift.toDef(MyZodSchema);
 
-// Transform that into another library
+// Convert that into a different schema library...
 const MyJoiSchema = JoiShift.fromDef(mySchemaDef);
 
-// Or into JSON Schema
+// ...or into JSON Schema
 const jsonSchema = JoiShift.toJsonSchema(MyJoiSchema);
 ```
 
