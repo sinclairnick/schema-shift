@@ -1,0 +1,98 @@
+{
+  "name": "schema-shift",
+  "description": "💠 Modify and transform validation schema with a unified API",
+  "version": "0.1.0",
+  "author": {
+    "name": "Nick Sinclair",
+    "email": "nicksinclair@xtra.co.nz",
+    "url": "https://github.com/sinclairnick"
+  },
+  "devDependencies": {
+    "@sinclair/typebox": "^0.32.31",
+    "@types/bun": "^1.1.8",
+    "joi": "^17.13.1",
+    "openapi3-ts": "^4.3.2",
+    "runtypes": "^6.7.0",
+    "superjson": "^2.2.1",
+    "superstruct": "^1.0.4",
+    "tsup": "^8.0.1",
+    "valibot": "^0.37.0",
+    "vitest": "^1.6.0",
+    "yup": "^1.4.0",
+    "zod": "^3.22.4"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./zod": {
+      "types": "./zod.d.ts",
+      "import": "./dist/zod.mjs",
+      "require": "./zod.js"
+    },
+    "./yup": {
+      "types": "./yup.d.ts",
+      "import": "./dist/yup.mjs",
+      "require": "./yup.js"
+    },
+    "./joi": {
+      "types": "./joi.d.ts",
+      "import": "./dist/joi.mjs",
+      "require": "./joi.js"
+    },
+    "./superstruct": {
+      "types": "./superstruct.d.ts",
+      "import": "./dist/superstruct.mjs",
+      "require": "./superstruct.js"
+    },
+    "./valibot": {
+      "types": "./valibot.d.ts",
+      "import": "./dist/valibot.mjs",
+      "require": "./valibot.js"
+    },
+    "./runtypes": {
+      "types": "./runtypes.d.ts",
+      "import": "./dist/runtypes.mjs",
+      "require": "./runtypes.js"
+    },
+    "./typebox": {
+      "types": "./typebox.d.ts",
+      "import": "./dist/typebox.mjs",
+      "require": "./typebox.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "schema",
+    "universal",
+    "modify",
+    "transform",
+    "convert",
+    "joi",
+    "typebox",
+    "zod"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "optionalDependencies": {
+    "@sinclair/typebox": "^0.32.31",
+    "joi": "^17.13.1",
+    "runtypes": "^6.7.0",
+    "superstruct": "^1.0.4",
+    "valibot": "^0.37.0",
+    "yup": "^1.4.0",
+    "zod": "^3.22.4"
+  },
+  "scripts": {
+    "build": "tsup",
+    "publish-pkg": "pnpm run build && pnpm publish --access=public --no-git-checks",
+    "test": "vitest"
+  },
+  "sideEffects": false,
+  "types": "dist/index.d.ts"
+}
