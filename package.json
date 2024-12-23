@@ -29,43 +29,57 @@
       "require": "./dist/index.js"
     },
     "./zod": {
-      "types": "./zod.d.ts",
+      "require": "./zod.js",
       "import": "./dist/zod.mjs",
-      "require": "./zod.js"
+      "types": "./zod.d.ts"
     },
     "./yup": {
-      "types": "./yup.d.ts",
+      "require": "./yup.js",
       "import": "./dist/yup.mjs",
-      "require": "./yup.js"
+      "types": "./yup.d.ts"
     },
     "./joi": {
-      "types": "./joi.d.ts",
+      "require": "./joi.js",
       "import": "./dist/joi.mjs",
-      "require": "./joi.js"
+      "types": "./joi.d.ts"
     },
     "./superstruct": {
-      "types": "./superstruct.d.ts",
+      "require": "./superstruct.js",
       "import": "./dist/superstruct.mjs",
-      "require": "./superstruct.js"
+      "types": "./superstruct.d.ts"
     },
     "./valibot": {
-      "types": "./valibot.d.ts",
+      "require": "./valibot.js",
       "import": "./dist/valibot.mjs",
-      "require": "./valibot.js"
+      "types": "./valibot.d.ts"
     },
     "./runtypes": {
-      "types": "./runtypes.d.ts",
+      "require": "./runtypes.js",
       "import": "./dist/runtypes.mjs",
-      "require": "./runtypes.js"
+      "types": "./runtypes.d.ts"
     },
     "./typebox": {
-      "types": "./typebox.d.ts",
+      "require": "./typebox.js",
       "import": "./dist/typebox.mjs",
-      "require": "./typebox.js"
+      "types": "./typebox.d.ts"
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "name.js",
+    "name.d.ts",
+    "name.js",
+    "name.d.ts",
+    "name.js",
+    "name.d.ts",
+    "name.js",
+    "name.d.ts",
+    "name.js",
+    "name.d.ts",
+    "name.js",
+    "name.d.ts",
+    "name.js",
+    "name.d.ts"
   ],
   "keywords": [
     "schema",
@@ -93,7 +107,8 @@
     "build": "tsup",
     "publish-pkg": "pnpm run build && pnpm publish --access=public --no-git-checks",
     "check": "tsc --noEmit",
-    "test": "vitest"
+    "test": "vitest",
+    "exports": "bun scripts/exports.ts"
   },
   "sideEffects": false,
   "types": "dist/index.d.ts"
