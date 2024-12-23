@@ -29,39 +29,39 @@
       "require": "./dist/index.js"
     },
     "./zod": {
+      "types": "./zod.d.ts",
       "require": "./zod.js",
-      "import": "./dist/zod.mjs",
-      "types": "./zod.d.ts"
+      "import": "./dist/zod.mjs"
     },
     "./yup": {
+      "types": "./yup.d.ts",
       "require": "./yup.js",
-      "import": "./dist/yup.mjs",
-      "types": "./yup.d.ts"
+      "import": "./dist/yup.mjs"
     },
     "./joi": {
+      "types": "./joi.d.ts",
       "require": "./joi.js",
-      "import": "./dist/joi.mjs",
-      "types": "./joi.d.ts"
+      "import": "./dist/joi.mjs"
     },
     "./superstruct": {
+      "types": "./superstruct.d.ts",
       "require": "./superstruct.js",
-      "import": "./dist/superstruct.mjs",
-      "types": "./superstruct.d.ts"
+      "import": "./dist/superstruct.mjs"
     },
     "./valibot": {
+      "types": "./valibot.d.ts",
       "require": "./valibot.js",
-      "import": "./dist/valibot.mjs",
-      "types": "./valibot.d.ts"
+      "import": "./dist/valibot.mjs"
     },
     "./runtypes": {
+      "types": "./runtypes.d.ts",
       "require": "./runtypes.js",
-      "import": "./dist/runtypes.mjs",
-      "types": "./runtypes.d.ts"
+      "import": "./dist/runtypes.mjs"
     },
     "./typebox": {
+      "types": "./typebox.d.ts",
       "require": "./typebox.js",
-      "import": "./dist/typebox.mjs",
-      "types": "./typebox.d.ts"
+      "import": "./dist/typebox.mjs"
     }
   },
   "files": [

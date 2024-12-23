@@ -17,9 +17,9 @@ const main = async () => {
 
   for (const name of Exports) {
     _pkg.exports[`./${name}`] = {
+      types: `./${name}.d.ts`,
       require: `./${name}.js`,
       import: `./dist/${name}.mjs`,
-      types: `./${name}.d.ts`,
     };
 
     pkgFiles.add(`${name}.js`);
