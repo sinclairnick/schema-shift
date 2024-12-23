@@ -8,10 +8,10 @@ npm i schema-shift
 
 ## Features
 
-- [x] Generate JSON Schema definitions
-- [x] Convert schema between various libraries
-- [x] Universal interface for parsing values and inferring types
-- [x] Traverse, introspect and transform schemas
+-   [x] Generate JSON Schema definitions
+-   [x] Convert schema between various libraries
+-   [x] Universal interface for parsing values and inferring types
+-   [x] Traverse, introspect and transform schemas
 
 ## Example Usage
 
@@ -40,7 +40,7 @@ Schema Shift unifies the ecosystem of validation libraries by making it trivial 
 Schema Shift transforms a given schema, defined using one of the many supported schema libraries, into an intermediate JSON Schema-like representation. In turn, this can be used to produce the equivalent schema in another library, modify the schema shape without touching any internals, or generate a JSON schema definition.
 
 ```
-[Schema 1] -> [Abstract Definition] -> [Schema 2]
+{Schema A} --[.toDef()]--> {Abstract Definition} --[.fromDef()]--> {Schema B}
 ```
 
 ## API Reference
@@ -125,7 +125,7 @@ The `Infer` type utility enables inferring the output type of any supported sche
 import { Infer, InferIn } from "schema-shift";
 
 const User = z.object({
-  id: z.number().transform(String),
+    id: z.number().transform(String),
 });
 
 type User = Infer<typeof User>;
@@ -153,6 +153,6 @@ parse(BarJoi, { bar: true });
 
 // Use the `Parser` type for custom functionality
 const customParser = (parser: Parser, value: unknown) => {
-  return parse(parser, value);
+    return parse(parser, value);
 };
 ```
