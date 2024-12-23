@@ -13,6 +13,7 @@ const Exports = [
 
 const main = async () => {
   const _pkg = { ...pkg };
+  const pkgFiles = new Set(pkg.files);
 
   for (const name of Exports) {
     _pkg.exports[`./${name}`] = {
@@ -21,9 +22,11 @@ const main = async () => {
       types: `./${name}.d.ts`,
     };
 
-    _pkg.files.push(`name.js`);
-    _pkg.files.push(`name.d.ts`);
+    pkgFiles.add(`${name}.js`);
+    pkgFiles.add(`${name}.d.ts`);
   }
+
+  _pkg.files = Array.from(pkgFiles);
 
   await write("./package.json", JSON.stringify(_pkg, null, 2));
 };

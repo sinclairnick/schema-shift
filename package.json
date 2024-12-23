@@ -1,7 +1,7 @@
 {
   "name": "schema-shift",
   "description": "💠 Modify and transform validation schema with a unified API",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": {
     "name": "Nick Sinclair",
     "email": "nicksinclair@xtra.co.nz",
@@ -66,20 +66,20 @@
   },
   "files": [
     "dist",
-    "name.js",
-    "name.d.ts",
-    "name.js",
-    "name.d.ts",
-    "name.js",
-    "name.d.ts",
-    "name.js",
-    "name.d.ts",
-    "name.js",
-    "name.d.ts",
-    "name.js",
-    "name.d.ts",
-    "name.js",
-    "name.d.ts"
+    "zod.js",
+    "zod.d.ts",
+    "yup.js",
+    "yup.d.ts",
+    "joi.js",
+    "joi.d.ts",
+    "superstruct.js",
+    "superstruct.d.ts",
+    "valibot.js",
+    "valibot.d.ts",
+    "runtypes.js",
+    "runtypes.d.ts",
+    "typebox.js",
+    "typebox.d.ts"
   ],
   "keywords": [
     "schema",
@@ -110,6 +110,5 @@
     "test": "vitest",
     "exports": "bun scripts/exports.ts"
   },
-  "sideEffects": false,
-  "types": "dist/index.d.ts"
+  "sideEffects": false
 }
